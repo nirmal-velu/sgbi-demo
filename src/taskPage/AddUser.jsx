@@ -87,7 +87,7 @@ function AddUser() {
 
   return (
 
-    <div className="container mt-4">
+    <div className="container ">
       <Navbar />
       <div className="add-user-container">
         <h2 className="mt-5">{id ? "Edit Task" : "Add Task"}</h2>

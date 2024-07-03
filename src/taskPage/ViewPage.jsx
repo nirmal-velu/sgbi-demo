@@ -106,9 +106,9 @@ function ViewPage() {
 
 
   return (
-    <div className='container mt-4' id='policyDetailContainer'>
+    <div className='container ' id='policyDetailContainer'>
       <Navbar/>
-      <div className='ms-5 mt-lg-5 mt-xxl-5 me-5 main-div'>
+      <div className='ms-5 mt-lg-5 mt-xxl-5 mt-sm-5 mt-xxs-4 me-5 main-div'>
         <div className='d-flex mb-xxl-3 justify-content-between mt-5 ms-5 me-5'>
           <div className='d-flex ' style={{ gap: "20px" }}>
             <div className='dropdown show'>
