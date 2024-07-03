@@ -1,0 +1,219 @@
+
+body{
+    background: linear-gradient(45deg, rgb(68 182 254), rgb(86 86 214));
+    background-size: 300%;
+    animation: bgcolor 5s linear infinite;
+  }
+  @keyframes bgcolor {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  :root{
+    height: 100vh;
+  }
+
+  /* -----------------------------------------Add User ------------------------------------- */
+
+.add-user-container{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.5, 0.2);
+    backdrop-filter: blur(10px);
+}
+#policyDetailContainer {
+    /* background: #36256E; */
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.net-hos-table> :not(caption)>*>* {
+    color: rgba(54, 37, 110, 1) !important;
+    padding: 15px 0px 15px 0px !important;
+    /* Corrected padding values */
+}
+
+.main-div {
+    width: 100%;
+    position: relative;
+    height: 60vh;
+    /* min-height: 546px;
+    max-height: 650px; */
+    border-radius: 10px;
+    background-color: #FFF;
+    /* margin: auto; */
+    overflow-y: scroll;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.net-hos-table th:nth-child(1) {
+    width: 18%;
+}
+
+.net-hos-table th:nth-child(2) {
+    width: 18%;
+}
+
+.net-hos-table th:nth-child(3) {
+    width: 30%;
+}
+
+.net-hos-table th:nth-child(4) {
+    width: 24%;
+}
+
+.net-hos-table th:nth-child(5) {
+    width: 10%;
+}
+
+.bg-col-netHos {
+    background-color: #F0F0F0 !important;
+    width: 100% !important;
+    text-align-last: center;
+    color: #36256E !important;
+}
+
+.custom-dropdown-toggle {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('../src/asset/dropdown.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px;
+    margin-right: 20px;
+}
+
+.search-data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar::placeholder {
+    font-size: 16px;
+    color: #36256E80;
+    font-family: Poppins;
+    font-weight: 400;
+    text-align: left;
+}
+
+/* .task-data::-webkit-scrollbar {
+    display: none;
+} */
+
+.txt-color {
+    color: rgba(54, 37, 110, 1) !important;
+}
+
+/* ------------------------------------dashbord css---------------------------------------------------- */
+
+.dashboard {
+    width: 100%;
+}
+
+.nav-gap {
+    width: 10%;
+    gap: 20px;
+    display: flex;
+}
+
+/* design.css */
+
+/* General styles for the container */
+
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    #policyDetailContainer {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown.show {
+        width: 100%;
+        display: none;
+    }
+
+    .search-data {
+        width: 100%;
+        margin-top: 10px;
+        display: none;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .table.net-hos-table th,
+    .table.net-hos-table td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .icon-img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media screen and (max-width: 480px) {
+    #policyDetailContainer {
+        margin: 5px auto;
+        padding: 5px;
+    }
+
+    .search-data input {
+        width: 100%;
+        display: none;
+    }
+
+    .search-data span {
+        width: 30%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .table.net-hos-table th,
+    .table.net-hos-table td {
+        font-size: 10px;
+        padding: 3px;
+    }
+}

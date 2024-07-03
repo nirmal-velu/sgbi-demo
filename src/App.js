@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import AddUser from './taskPage/AddUser';
+import TaskPage from './taskPage/ViewPage';
+import Navbar from './taskPage/Navbar';
+import ViewPage from './taskPage/ViewPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        {/* <Navbar /> */}
+        <Routes>
+          <Route path='/' element={<AddUser />} />
+          <Route path='/viewpage' element={<ViewPage />} />
+
+        </Routes>
+      </Router>
+    </>
   );
 }
 
