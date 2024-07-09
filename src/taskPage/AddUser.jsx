@@ -8,6 +8,7 @@ import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 import { format } from "date-fns"; // Ensure you have date-fns installed
 import Navbar from "./Navbar";
+import DashBoard from "./DashBoard";
 
 const schema = yup.object().shape({
   Title: yup.string().required("Title is required"),
@@ -87,7 +88,9 @@ function AddUser() {
 
   return (
 
-    <div className="container ">
+    <div className="container-fluid d-flex h-100"id='policyDetailContainer' >
+      <DashBoard/>
+      <div className="container-fluid"style={{height:"100vh",overflow:"auto"}}>
       <Navbar />
       <div className="add-user-container">
         <h2 className="mt-5">{id ? "Edit Task" : "Add Task"}</h2>
@@ -141,6 +144,7 @@ function AddUser() {
             {id ? "Update Task" : "Add Task"}
           </button>
         </form>
+      </div>
       </div>
     </div>
   );

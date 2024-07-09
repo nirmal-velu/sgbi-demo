@@ -1,7 +1,8 @@
 body {
-    background: linear-gradient(45deg, rgb(68 182 254), rgb(86 86 214));
-    background-size: 300%;
-    overflow: auto;
+    /* background: linear-gradient(45deg, rgb(68 182 254), rgb(86 86 214)); */
+    /* background: #CACACA; */
+    /* background-size: 300%; */
+    /* overflow: auto; */
     height: var(--full-height);
     animation: bgcolor 5s linear infinite;
 }
@@ -22,8 +23,7 @@ body {
 
 :root {
     --full-height: 100vh;
-    overflow-y: auto;
-
+  
 }
 
 
@@ -36,7 +36,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 
 .form-container {
@@ -50,12 +50,14 @@ body {
 
 #policyDetailContainer {
     /* background: #36256E; */
+    /* background: #36256E; */
     height: 100vh;
-    overflow-y: auto;
     display: flex;
-    flex-direction: column;
+    --bs-gutter-x: 0;
+    overflow: auto;
+    /* flex-direction: column; */
     /* justify-content: center; */
-    align-items: center;
+    /* align-items: center; */
 }
 
 .net-hos-table> :not(caption)>*>* {
@@ -65,9 +67,9 @@ body {
 }
 
 .main-div {
-    width: 100%;
+    width: 750px;
     position: relative;
-    height: 60vh;
+    /* height: 60vh; */
     /* min-height: 546px;
     max-height: 650px; */
     border-radius: 10px;
@@ -146,7 +148,7 @@ body {
     color: rgba(54, 37, 110, 1) !important;
 }
 
-/* ------------------------------------dashbord css---------------------------------------------------- */
+/* ------------------------------------navbar css---------------------------------------------------- */
 
 .dashboard {
     width: 100%;
@@ -158,6 +160,192 @@ body {
     display: flex;
 }
 
+/* -------------------------------------dashboard---------------------------------------------------- */
+.dashboard-comp {
+    width: 150px;
+    /* Initial width */
+    min-height: 100%;
+    position: relative;
+    background: #060606 !important;
+    transition: width 0.3s ease-in-out;
+    /* overflow: scroll; */
+}
+
+.dashboard-comp.expanded {
+    width: 300px;
+    /* Expanded width when toggle button is clicked */
+}
+
+.toggle-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.icon-wrapper {
+    margin-bottom: 15px;
+    /* Space between icons */
+    width: 100%;
+}
+
+.icon-content {
+    padding: 10px;
+
+}
+.icon-txt-color{
+color:  #000 !important;;
+}
+
+.icon-active{
+    background-color: gray;
+    border-radius: 50px;
+}
+
+.iconContentWrap {
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    width: 50px;
+    /* Adjust image width */
+    height: 50px;
+    /* Adjust image height */
+    margin-right: 10px;
+    /* Space between icon and text */
+}
+
+.icon-text {
+    color: white;
+}
+
+.open-close {
+    position: relative;
+    left: -10px;
+}
+
+
+
+/* Optional: Hover effect */
+/* .icon-content:hover {
+    background-color: #f0f0f0;
+} */
+
+/* --------------------------------------------------cards------------------------------------------------- */
+.cards {
+    margin-top: 20px;
+}
+.card-data{
+    display: flex;
+    justify-content: space-between;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    width: 8%;
+    min-width: 200px;
+    max-width: 400px;
+    height: 180px;
+    min-height: fit-content;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #36256E;
+    margin: 20px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.card-section1 {
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    background: #9747FF;
+    border-radius: 25px;
+    border: 1px solid white
+}
+
+.card-section2 {
+
+    width: 80%;
+}
+
+
+.card-details-label {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.card-details-value {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* ------------------------------------------------speedometer-------------------------- */
+/* 
+.speedometer-container{
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+    border-radius: 50%;
+    position: relative;
+}
+.center-point{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+}
+.speedometer-scale{
+    width: 8px;
+    height: 280px;
+    background-color: black;
+    position: absolute;
+    left:143px;
+    top:7px;
+    transform: rotate(-90deg);
+} */
+
+.chart-container{
+    background: #FFFFFF;
+}
+
+#chart{
+    height: 25vh;
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width:576px) {
+    .card-container {
+        margin: 10px !important;
+
+    }
+}
+
+
 /* design.css */
 
 /* General styles for the container */
@@ -166,8 +354,12 @@ body {
 /* Adjustments for smaller screens */
 @media screen and (max-width: 768px) {
     #policyDetailContainer {
-        margin: 10px auto;
-        padding: 10px;
+        /* margin: 10px auto;
+        padding: 10px; */
+        overflow: auto;
+        height: 100%;
+        --bs-gutter-x: 0;
+
     }
 
     .d-flex {

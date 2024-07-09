@@ -8,7 +8,7 @@ function Navbar() {
     const location = useLocation()
     return (
         <>
-            <nav className="navbar navbar-expand navbar-light bg-light dashboard  ">
+            <nav className="navbar navbar-expand navbar-light bg-light dashboard ms-5 me-5">
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 </button>
                 <div className="ms-5 h2 txt-color">{location.pathname == "/" ? "Home Page" : "View Page"}</div>
